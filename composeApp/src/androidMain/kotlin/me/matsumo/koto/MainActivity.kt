@@ -26,7 +26,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             val userData by viewModel.setting.collectAsStateWithLifecycle(null)
             val isSystemInDarkTheme = shouldUseDarkTheme(userData?.theme ?: Theme.System)

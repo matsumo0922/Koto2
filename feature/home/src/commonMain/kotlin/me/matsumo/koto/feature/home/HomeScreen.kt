@@ -1,13 +1,16 @@
 package me.matsumo.koto.feature.home
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Button
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import me.matsumo.koto.core.model.Destination
 import me.matsumo.koto.core.ui.theme.LocalNavController
+import me.matsumo.koto.feature.home.components.HomeTopAppBar
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -18,14 +21,16 @@ internal fun HomeScreen(
 ) {
     val navController = LocalNavController.current
 
-    Box(
+    Scaffold(
         modifier = modifier,
-        contentAlignment = Alignment.Center,
-    ) {
-        Button(
-            onClick = { navController.navigate(Destination.Setting.Root) },
-        ) {
-            Text("Setting")
+        topBar = {
+            HomeTopAppBar(
+                modifier = Modifier.fillMaxWidth(),
+                onHistoryClicked = { },
+                onAccountClicked = { navController.navigate(Destination.Setting.Root) },
+            )
         }
+    ) {
+
     }
 }
