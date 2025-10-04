@@ -26,6 +26,7 @@ class KmpComposePlugin : Plugin<Project> {
                 val bom = libs.library("compose-bom")
 
                 implementation(project.dependencies.platform(bom))
+                implementation(libs.library("compose-runtime"))
                 implementation(libs.library("compose-ui-tooling-preview"))
                 debugImplementation(libs.library("compose-ui-tooling"))
                 androidTestImplementation(project.dependencies.platform(bom))

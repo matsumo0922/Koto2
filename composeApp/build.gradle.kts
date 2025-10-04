@@ -2,6 +2,7 @@
 
 import com.android.build.api.variant.ResValue
 import com.codingfeline.buildkonfig.compiler.FieldSpec
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.konan.properties.Properties
 
 plugins {
@@ -10,6 +11,7 @@ plugins {
     id("matsumo.primitive.kmp.compose")
     id("matsumo.primitive.kmp.android")
     id("matsumo.primitive.kmp.ios")
+    id("matsumo.primitive.kmp.jvm")
     id("matsumo.primitive.detekt")
 }
 
@@ -87,6 +89,12 @@ android {
                 it.packaging.resources.excludes.add("META-INF/**")
             }
         }
+    }
+}
+
+compose.desktop {
+    application {
+        mainClass = "ApplicationKt"
     }
 }
 

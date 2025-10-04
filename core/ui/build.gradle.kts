@@ -4,6 +4,7 @@ plugins {
     id("matsumo.primitive.kmp.compose")
     id("matsumo.primitive.kmp.android")
     id("matsumo.primitive.kmp.ios")
+    id("matsumo.primitive.kmp.jvm")
     id("matsumo.primitive.detekt")
 }
 
@@ -42,6 +43,12 @@ kotlin {
         androidMain.dependencies {
             api(libs.bundles.ui.android)
             api(libs.play.service.ads)
+        }
+
+        jvmMain.dependencies {
+            api(compose.desktop.currentOs) {
+                exclude(group = "org.jetbrains.compose.material")
+            }
         }
     }
 }
