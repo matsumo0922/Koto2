@@ -7,7 +7,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
 import me.matsumo.koto.core.repository.AppSettingRepository
