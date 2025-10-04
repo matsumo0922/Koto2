@@ -13,7 +13,6 @@ import me.matsumo.koto.core.model.AppConfig
 import me.matsumo.koto.core.model.AppSetting
 import me.matsumo.koto.core.model.Theme
 import me.matsumo.koto.core.ui.utils.rememberColorScheme
-import org.koin.compose.koinInject
 
 @Suppress("ModifierMissing")
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
@@ -21,7 +20,7 @@ import org.koin.compose.koinInject
 fun KotoTheme(
     appSetting: AppSetting = AppSetting.DEFAULT,
     navController: NavHostController = rememberNavController(),
-    appConfig: AppConfig = koinInject(),
+    appConfig: AppConfig = AppConfig.DEFAULT,
     content: @Composable () -> Unit,
 ) {
     val colorScheme = rememberColorScheme(

@@ -7,6 +7,7 @@ import coil3.compose.setSingletonImageLoaderFactory
 import io.github.vinceglb.filekit.coil.addPlatformFileSupport
 import me.matsumo.koto.core.model.AppSetting
 import me.matsumo.koto.core.ui.theme.KotoTheme
+import org.koin.compose.koinInject
 
 @Composable
 internal fun KotoApp(
@@ -15,7 +16,10 @@ internal fun KotoApp(
 ) {
     SetupCoil()
 
-    KotoTheme(setting) {
+    KotoTheme(
+        appSetting = setting,
+        appConfig = koinInject()
+    ) {
         AppNavHost(modifier)
     }
 }

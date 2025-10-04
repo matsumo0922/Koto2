@@ -2,6 +2,8 @@
 <resources>
     <!-- App -->
     <string name="app_name">Koto翻訳</string>
+    <string name="app_name1">Koto</string>
+    <string name="app_name2">翻訳</string>
 
     <!-- Common -->
     <string name="common_ok">OK</string>

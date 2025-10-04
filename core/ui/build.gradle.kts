@@ -32,6 +32,7 @@ kotlin {
             api(compose.material)
             // api(compose.material3)
             api(compose.ui)
+            api(compose.preview)
             api(compose.materialIconsExtended)
             api(compose.components.uiToolingPreview)
 
