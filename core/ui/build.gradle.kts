@@ -30,7 +30,7 @@ kotlin {
             api(compose.animation)
             api(compose.animationGraphics)
             api(compose.material)
-            api(compose.material3)
+            // api(compose.material3)
             api(compose.ui)
             api(compose.materialIconsExtended)
             api(compose.components.uiToolingPreview)
@@ -38,6 +38,8 @@ kotlin {
             api(libs.adaptive)
             api(libs.adaptive.layout)
             api(libs.adaptive.navigation)
+
+            api(libs.compose.material3)
         }
 
         androidMain.dependencies {

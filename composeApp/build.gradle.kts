@@ -95,6 +95,33 @@ android {
 compose.desktop {
     application {
         mainClass = "ApplicationKt"
+
+        buildTypes.release.proguard {
+            version.set("7.6.1")
+            isEnabled = false
+        }
+
+        nativeDistributions {
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            packageName = "koto"
+            packageVersion = "1.0.0"
+
+            linux {
+                iconFile.set(project.file("desktopAppIcons/LinuxIcon.png"))
+            }
+            windows {
+                iconFile.set(project.file("desktopAppIcons/WindowsIcon.ico"))
+                perUserInstall = true
+            }
+            macOS {
+                iconFile.set(project.file("desktopAppIcons/MacosIcon.icns"))
+                bundleID = "me.matsumo.koto"
+            }
+
+            jvmArgs(
+                "-Dapple.awt.application.appearance=system",
+            )
+        }
     }
 }
 

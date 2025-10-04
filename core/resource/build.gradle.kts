@@ -21,6 +21,7 @@ compose.resources {
 kotlin {
     sourceSets {
         commonMain.dependencies {
+            api(compose.runtime)
             api(compose.components.resources)
         }
     }

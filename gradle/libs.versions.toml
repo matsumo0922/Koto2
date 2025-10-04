@@ -28,6 +28,7 @@ kmpNavigation = "2.9.0"
 kmpPurchase = "2.1.0+16.2.0"
 kmpPurchaseCommon = "14.0.2"
 adaptive = "1.1.2"
+material3 = "1.9.0-alpha04"
 
 # AndroidX
 androidxCore = "1.17.0"
@@ -37,7 +38,7 @@ androidxActivity = "1.11.0"
 androidxFragment = "1.8.9"
 androidxDataStore = "1.1.7"
 androidxAnnotation = "1.9.1"
-compose = "2025.09.01"
+compose = "2025.09.00"
 
 # Google
 playReview = "2.0.2"
@@ -72,18 +73,26 @@ twitterComposeRule = "0.0.26"
 napier = "2.7.1"
 
 [plugins]
+# Android
 android-application = { id = "com.android.application", version.ref = "gradle" }
 android-library = { id = "com.android.library", version.ref = "gradle" }
+
+# Kotlin
 kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-gms = { id = "com.google.gms.google-services", version.ref = "gms" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics" }
-libraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "libraries" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+# KMP
 kmp = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kmpCompose = { id = "org.jetbrains.compose", version.ref = "kmpCompose" }
+kmpJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kmpComplete = { id = "com.louiscad.complete-kotlin", version.ref = "kmpComplete" }
+
+# Others
+gms = { id = "com.google.gms.google-services", version.ref = "gms" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics" }
+libraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "libraries" }
 
 [libraries]
 ## Dependency of the include build-logic
@@ -129,6 +138,7 @@ compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"
 kmp-lifecycle-runtime-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "kmpLifecycle" }
 kmp-lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "kmpLifecycle" }
 kmp-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "kmpNavigation" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "material3" }
 
 # Purchase
 purchases-core = { module = "com.revenuecat.purchases:purchases-kmp-core", version.ref = "kmpPurchase" }
