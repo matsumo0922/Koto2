@@ -56,11 +56,7 @@
     <string name="unit_sheet">枚</string>
 
     <!-- Home -->
-    <string name="home_title">証明写真</string>
-    <string name="home_menu_camera">カメラ</string>
-    <string name="home_menu_album">アルバム</string>
-    <string name="home_menu_setting">設定</string>
-    <string name="home_menu_history">履歴</string>
+    <string name="home_mic">音声入力</string>
     <string name="home_buy_plus_button">広告を削除</string>
     <string name="home_purchase_expired">プラン失効</string>
     <string name="home_purchase_expired_description">プランが失効したため、通常ユーザーに戻りました。\n\n意図していない場合は支払いに失敗している可能性があります。ストアアプリより、プランの状況をご確認ください。</string>

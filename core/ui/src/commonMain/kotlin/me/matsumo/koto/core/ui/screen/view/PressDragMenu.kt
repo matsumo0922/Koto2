@@ -113,7 +113,7 @@ private fun PressDialogMenuPopup(
     val targetScale = if (visibleState.targetState) 1f else 0f
     val scaleY by animateFloatAsState(
         targetValue = targetScale,
-        animationSpec = tween(durationMillis = 250, easing = FastOutSlowInEasing),
+        animationSpec = tween(durationMillis = 280, easing = FastOutSlowInEasing),
         label = "menu-scaleY"
     )
 

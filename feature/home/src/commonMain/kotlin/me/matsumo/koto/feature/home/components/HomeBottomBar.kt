@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.toImmutableList
 import me.matsumo.koto.core.model.LanguageCode
+import me.matsumo.koto.core.model.ModelType
 import me.matsumo.koto.core.model.TranslationDirection
 import me.matsumo.koto.core.ui.screen.view.PressDragMenu
 
@@ -41,6 +42,14 @@ internal fun HomeBottomBar(
             availableSourceLanguages = LanguageCode.entries.toImmutableList(),
             availableTargetLanguages = LanguageCode.entries.toImmutableList(),
             onDirectionChanged = {},
+        )
+
+        HomeBottomInputSection(
+            modifier = Modifier.fillMaxWidth(),
+            selectedModelType = ModelType.Speed,
+            onMicClicked = {},
+            onClipboardClicked = {},
+            onModelTypeClicked = {},
         )
     }
 }
