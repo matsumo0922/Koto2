@@ -10,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import me.matsumo.koto.core.model.Destination
 import me.matsumo.koto.core.ui.theme.LocalNavController
+import me.matsumo.koto.feature.home.components.HomeBottomBar
 import me.matsumo.koto.feature.home.components.HomeTopAppBar
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -28,6 +29,11 @@ internal fun HomeScreen(
                 modifier = Modifier.fillMaxWidth(),
                 onHistoryClicked = { },
                 onAccountClicked = { navController.navigate(Destination.Setting.Root) },
+            )
+        },
+        bottomBar = {
+            HomeBottomBar(
+                modifier = Modifier.fillMaxWidth(),
             )
         }
     ) {
