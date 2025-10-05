@@ -35,7 +35,7 @@ internal fun HomeScreen(
             HomeBottomBar(
                 modifier = Modifier.fillMaxWidth(),
             )
-        }
+        },
     ) {
 
     }
